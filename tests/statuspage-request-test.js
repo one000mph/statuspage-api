@@ -111,7 +111,7 @@ describe('Request (POST:incidents)', function () {
             assert.equal(options["headers"]["Content-Length"], dataLength);
             return request;
         });
-        statuspageRequest.sendRequest("POST", "incidents", args);
+        statuspageRequest.sendRequest("POST", "incidents", null, args);
     });
 
     it("should emit warning with invalid Element", function () {
@@ -160,7 +160,7 @@ describe('Request (PATCH:incidents)', function () {
       assert.equal(options["headers"]["Content-Length"], dataLength);
       return request;
     });
-    statuspageRequest.sendRequest("PATCH", "incidents/w73483838", args);
+    statuspageRequest.sendRequest("PATCH", "incidents/w73483838", null, args);
   });
 
   it("should emit warning with invalid Element", function () {
@@ -209,7 +209,7 @@ describe('Request (PUT:component-groups)', function () {
       assert.equal(options["headers"]["Content-Length"], dataLength);
       return request;
     });
-    statuspageRequest.sendRequest("PUT", "components-groups/w73463sdw2", args);
+    statuspageRequest.sendRequest("PUT", "components-groups/w73463sdw2", null, args);
   });
 
   it("should emit warning with invalid Element", function () {
