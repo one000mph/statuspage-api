@@ -1,6 +1,6 @@
 {
   "name": "@one000mph/statuspage-api",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "A wrapper for select statuspage.io API commands",
   "main": "index.js",
   "scripts": {
