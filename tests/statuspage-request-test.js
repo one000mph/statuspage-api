@@ -18,7 +18,7 @@ var _ = require("underscore"),
         it("should use the correct Method and Element", function () {
             before();
             var element = "pages",
-                correctPath = "/v1/" + element + "/" + statuspage["pageid"] + ".json";
+                correctPath = "/v1/" + element + "/" + statuspage["pageid"];
             gently.expect(GENTLY_HIJACK.hijacked.https, "request", function (options) {
                 assert.equal(options["method"], "GET");
                 assert.equal(options["path"], correctPath);
@@ -90,7 +90,7 @@ describe('Request (POST:incidents)', function () {
     it("should create the correct default options", function () {
         before();
         var element = "incidents",
-            correctPath = "/v1/pages/" + statuspage["pageid"] + "/" + element + ".json";
+            correctPath = "/v1/pages/" + statuspage["pageid"] + "/" + element;
         gently.expect(GENTLY_HIJACK.hijacked.https, "request", function (options) {
             assert.equal(options["method"], "POST");
             assert.equal(options["path"], correctPath);
@@ -139,7 +139,7 @@ describe('Request (PATCH:incidents)', function () {
   it("should create the update the incident", function () {
     before();
     var element = "incidents/w73483838",
-        correctPath = "/v1/pages/" + statuspage["pageid"] + "/" + element + ".json";
+        correctPath = "/v1/pages/" + statuspage["pageid"] + "/" + element;
     gently.expect(GENTLY_HIJACK.hijacked.https, "request", function (options) {
       assert.equal(options["method"], "PATCH");
       assert.equal(options["path"], correctPath);
@@ -188,7 +188,7 @@ describe('Request (PUT:component-groups)', function () {
   it("should create the update the component group", function () {
     before();
     var element = "components-groups/w73463sdw2",
-        correctPath = "/v1/pages/" + statuspage["pageid"] + "/" + element + ".json";
+        correctPath = "/v1/pages/" + statuspage["pageid"] + "/" + element;
     gently.expect(GENTLY_HIJACK.hijacked.https, "request", function (options) {
       assert.equal(options["method"], "PUT");
       assert.equal(options["path"], correctPath);
