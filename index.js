@@ -1,2 +1,2 @@
-StatusPageAPI = require('./lib/statuspage/index').StatusPageAPI;
+const StatusPageAPI = require('./lib/statuspage/index').StatusPageAPI;
 module.exports = StatusPageAPI
